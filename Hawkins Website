@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Hawkins Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #006400; /* Dark Green */
+            --secondary-color: #ffffff; /* White */
+            --text-color: #333333; /* Dark Gray */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #f0f0f0;
+        }
+
+        .hero h2 {
+            color: var(--primary-color);
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Justin Hawkins Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Showcasing my skills in Python, SQL, and problem-solving.</p>
+    </div>
+
+    <section class="section" id="about">
+        <h3>About Me</h3>
+        <p>I am a driven individual with a passion for creating impactful solutions using modern technologies. Explore my portfolio to see my work.</p>
+    </section>
+
+    <section class="section" id="projects">
+        <h3>Projects</h3>
+        <ul>
+            <li><strong>Project 1:</strong> Data Analysis with SQL</li>
+            <li><strong>Project 2:</strong> Python Automation Script</li>
+            <li><strong>Project 3:</strong> Interactive Dashboard</li>
+        </ul>
+    </section>
+
+    <section class="section" id="contact">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:hawki353@msu.edu">hawki353@msu.edu</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Justin Hawkins. All rights reserved.</p>
+    </footer>
+</body>
+</html>
