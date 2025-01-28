@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Hawkins Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #006400; /* Dark Green */
+            --secondary-color: #ffffff; /* White */
+            --text-color: #333333; /* Dark Gray */
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+            background-color: #f0f0f0;
+        }
+
+        .hero h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .interactive-slot {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .interactive-slot h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .interactive-slot p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .interactive-slot button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .interactive-slot button:hover {
+            background-color: #004d00;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        function showRandomFact() {
+            const facts = [
+                "SQL is used by over 70% of businesses.",
+                "Python is one of the most popular languages for data science.",
+                "Interactive dashboards make data insights accessible to everyone."
+            ];
+            alert(facts[Math.floor(Math.random() * facts.length)]);
+        }
+
+        function generateRandomData() {
+            const data = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
+            alert(`Generated Data: ${data.join(', ')}`);
+        }
+
+        function visualizeData() {
+            alert("Visualizing data... (Placeholder for actual chart)");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Justin Hawkins Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Showcasing my skills in Python, SQL, and problem-solving.</p>
+    </div>
+
+    <section class="section" id="about">
+        <h3>About Me</h3>
+        <p>I am a driven individual with a passion for creating impactful solutions using modern technologies. Explore my portfolio to see my work.</p>
+    </section>
+
+    <section class="section" id="projects">
+        <h3>Projects</h3>
+
+        <div class="interactive-slot">
+            <h4>Random Fact Generator</h4>
+            <p>Click the button to see an interesting fact about data science.</p>
+            <button onclick="showRandomFact()">Show Fact</button>
+        </div>
+
+        <div class="interactive-slot">
+            <h4>Data Generator</h4>
+            <p>Generate a small dataset to simulate random data insights.</p>
+            <button onclick="generateRandomData()">Generate Data</button>
+        </div>
+
+        <div class="interactive-slot">
+            <h4>Data Visualization</h4>
+            <p>Preview a sample data visualization (placeholder).</p>
+            <button onclick="visualizeData()">Visualize Data</button>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:hawki353@msu.edu">hawki353@msu.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-hawkins/" target="_blank">linkedin.com/in/justin-hawkins</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Justin Hawkins. All rights reserved.</p>
+    </footer>
+</body>
+</html>
