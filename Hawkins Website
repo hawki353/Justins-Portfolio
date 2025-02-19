@@ -6,9 +6,9 @@
     <title>Justin Hawkins Portfolio</title>
     <style>
         :root {
-            --primary-color: #006400; /* Dark Green */
-            --secondary-color: #ffffff; /* White */
-            --text-color: #333333; /* Dark Gray */
+            --primary-color: #006400;
+            --secondary-color: #ffffff;
+            --text-color: #333333;
         }
 
         body {
@@ -25,11 +25,6 @@
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
         nav {
             display: flex;
             justify-content: center;
@@ -44,21 +39,6 @@
             font-size: 1.2rem;
         }
 
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem;
-            background-color: #f0f0f0;
-        }
-
-        .hero h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
         .section {
             max-width: 1100px;
             margin: 2rem auto;
@@ -67,12 +47,6 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
         }
 
         .interactive-slot {
@@ -85,62 +59,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .interactive-slot h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .interactive-slot p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        .interactive-slot button {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .interactive-slot button:hover {
-            background-color: #004d00;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            overflow-x: auto;
         }
     </style>
-    <script>
-        function showRandomFact() {
-            const facts = [
-                "SQL is used by over 70% of businesses.",
-                "Python is one of the most popular languages for data science.",
-                "Interactive dashboards make data insights accessible to everyone."
-            ];
-            alert(facts[Math.floor(Math.random() * facts.length)]);
-        }
-
-        function generateRandomData() {
-            const data = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
-            alert(`Generated Data: ${data.join(', ')}`);
-        }
-
-        function visualizeData() {
-            alert("Visualizing data... (Placeholder for actual chart)");
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -153,42 +79,61 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Showcasing my skills in Python, SQL, and problem-solving.</p>
-    </div>
-
     <section class="section" id="about">
         <h3>About Me</h3>
-        <p>I am a driven individual with a passion for creating impactful solutions using modern technologies. Explore my portfolio to see my work.</p>
+        <p>I am a curious and determined individual who enjoys tackling real-world problems with technology. My work primarily involves data analysis, programming, and building creative solutions using Python, SQL, and visualization tools. Whether it’s generating insights from raw data or building engaging projects, I love exploring new concepts and continuously improving my skills.</p>
     </section>
 
     <section class="section" id="projects">
         <h3>Projects</h3>
 
         <div class="interactive-slot">
-            <h4>Random Fact Generator</h4>
-            <p>Click the button to see an interesting fact about data science.</p>
-            <button onclick="showRandomFact()">Show Fact</button>
+            <h4>Data Generator Project (MSU Burgess Institute of Science)</h4>
+            <p>For this project, I built a simple yet effective data generator to create mock datasets for testing and analysis. This was particularly useful for simulating real-world data before working with actual company datasets.</p>
+            <p>The script randomly generates names, ages, and scores, making it great for testing database operations and visualizations.</p>
+            <img src="URL_TO_YOUR_DATA_GENERATOR_IMAGE" alt="Data Generator Screenshot" style="width: 100%; max-width: 500px; border-radius: 8px; margin-top: 10px;">
+            <pre>
+import random
+import pandas as pd
+
+names = ["Alice", "Bob", "Charlie", "David", "Emma"]
+data = [{"Name": random.choice(names), "Age": random.randint(18, 40), "Score": random.randint(50, 100)} for _ in range(10)]
+
+df = pd.DataFrame(data)
+print(df)
+            </pre>
+            <p>This script helped me learn how to generate structured data efficiently. I used Python’s random module and Pandas to store the generated values in a structured format, making it easy to analyze and manipulate later.</p>
         </div>
 
         <div class="interactive-slot">
-            <h4>Data Generator</h4>
-            <p>Generate a small dataset to simulate random data insights.</p>
-            <button onclick="generateRandomData()">Generate Data</button>
-        </div>
+            <h4>Data Visualization Project</h4>
+            <p>I created this project to explore how visual representations can help interpret data more effectively. Using Matplotlib, I built a simple bar chart that visualizes randomly generated scores.</p>
+            <img src="URL_TO_YOUR_DATA_VISUALIZATION_IMAGE" alt="Data Visualization Screenshot" style="width: 100%; max-width: 500px; border-radius: 8px; margin-top: 10px;">
+            <pre>
+import random
+import matplotlib.pyplot as plt
 
-        <div class="interactive-slot">
-            <h4>Data Visualization</h4>
-            <p>Preview a sample data visualization (placeholder).</p>
-            <button onclick="visualizeData()">Visualize Data</button>
+names = ["Jake", "Mark", "Stephen", "David", "Emma"]
+scores = [random.randint(50, 100) for _ in names]
+
+plt.bar(names, scores, color='green')
+plt.xlabel("Names")
+plt.ylabel("Scores")
+plt.title("Randomly Generated Scores")
+plt.show()
+            </pre>
+            <p>With this project, I explored Matplotlib’s ability to quickly generate insightful graphs. By randomly assigning scores to names, I was able to practice formatting and labeling charts, which is a crucial skill in data storytelling.</p>
         </div>
     </section>
 
     <section class="section" id="contact">
         <h3>Contact Me</h3>
-        <p>Email: <a href="mailto:hawki353@msu.edu">hawki353@msu.edu</a></p>
+        <p>Email: <a href="mailto:Jhawkinses@gmail.com">Jhawkinses@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-hawkins/" target="_blank">linkedin.com/in/justin-hawkins</a></p>
+    </section>
+
+    <section class="section" id="gogreengowhite" style="text-align:center; font-size:1.5rem; font-weight:bold; color:#006400; margin-top:2rem;">
+        <p>Go Green! Go White!</p>
     </section>
 
     <footer>
