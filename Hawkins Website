@@ -16,61 +16,79 @@
             font-family: Arial, sans-serif;
             color: var(--text-color);
             background-color: var(--secondary-color);
+            line-height: 1.6;
         }
 
         header {
             background-color: var(--primary-color);
             color: var(--secondary-color);
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 1.5rem 0;
+            gap: 2.5rem;
+            margin: 2rem 0;
+            font-size: 1.3rem;
         }
 
         nav a {
             text-decoration: none;
             color: var(--primary-color);
             font-weight: bold;
-            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
         }
 
         .section {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem;
             background-color: var(--secondary-color);
             border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
         .interactive-slot {
-            margin-bottom: 2rem;
-            padding: 2rem;
+            margin-bottom: 3rem;
+            padding: 2.5rem;
             background-color: #f9f9f9;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
         pre {
             background-color: #f4f4f4;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             text-align: left;
             overflow-x: auto;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Justin Hawkins Portfolio</h1>
+        Justin Hawkins Portfolio
     </header>
 
     <nav>
@@ -80,35 +98,35 @@
     </nav>
 
     <section class="section" id="about">
-        <h3>About Me</h3>
-        <p>I am a curious and determined individual who enjoys tackling real-world problems with technology. My work primarily involves data analysis, programming, and building creative solutions using Python, SQL, and visualization tools. Whether it’s generating insights from raw data or building engaging projects, I love exploring new concepts and continuously improving my skills.</p>
+        <h2>About Me</h2>
+        <p>I am a passionate problem solver who enjoys using technology to create meaningful solutions. My expertise includes data analysis, programming, and visualization. I love working with Python, SQL, and tools that help bring insights to life. My projects range from building interactive applications to analyzing large datasets, always with a focus on efficiency and innovation.</p>
     </section>
 
     <section class="section" id="projects">
-        <h3>Projects</h3>
+        <h2>Projects</h2>
 
         <div class="interactive-slot">
-            <h4>Data Generator Project (MSU Burgess Institute of Science)</h4>
-            <p>For this project, I built a simple yet effective data generator to create mock datasets for testing and analysis. This was particularly useful for simulating real-world data before working with actual company datasets.</p>
-            <p>The script randomly generates names, ages, and scores, making it great for testing database operations and visualizations.</p>
-            <img src="URL_TO_YOUR_DATA_GENERATOR_IMAGE" alt="Data Generator Screenshot" style="width: 100%; max-width: 500px; border-radius: 8px; margin-top: 10px;">
+            <h3>Data Generator Project (MSU Burgess Institute of Science)</h3>
+            <p>This project involved creating a mock data generator to simulate real-world datasets for testing and analysis. It was useful for experimenting with data structures before implementing real-world solutions.</p>
+            <p>The generator creates randomized names, ages, and scores to help test database operations and data visualizations.</p>
+            <img src="URL_TO_YOUR_DATA_GENERATOR_IMAGE" alt="Data Generator Screenshot" style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 15px;">
             <pre>
 import random
 import pandas as pd
 
 names = ["Stephen", "Mark", "Ben", "Abby", "Emma"]
-data = [{"Name": random.choice(names), "Age": random.randint(18, 40), "Score": random.randint(50, 100)} for _ in range(10)]
+data = [{"Name": random.choice(names), "Age": random.randint(18, 40), "Score": random.randint(50, 100)} for _ in range(20)]
 
 df = pd.DataFrame(data)
 print(df)
             </pre>
-            <p>This script helped me learn how to generate structured data efficiently. I used Python’s random module and Pandas to store the generated values in a structured format, making it easy to analyze and manipulate later.</p>
+            <p>Expanding on this project, I explored data cleaning techniques and integrated the generated datasets into machine learning models for pattern recognition.</p>
         </div>
 
         <div class="interactive-slot">
-            <h4>Data Visualization Project</h4>
-            <p>I created this project to explore how visual representations can help interpret data more effectively. Using Matplotlib, I built a simple bar chart that visualizes randomly generated scores.</p>
-            <img src="URL_TO_YOUR_DATA_VISUALIZATION_IMAGE" alt="Data Visualization Screenshot" style="width: 100%; max-width: 500px; border-radius: 8px; margin-top: 10px;">
+            <h3>Data Visualization Project</h3>
+            <p>To enhance my data storytelling skills, I created this project focusing on clear and engaging data visualizations using Matplotlib. The goal was to transform raw data into a compelling narrative.</p>
+            <img src="URL_TO_YOUR_DATA_VISUALIZATION_IMAGE" alt="Data Visualization Screenshot" style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 15px;">
             <pre>
 import random
 import matplotlib.pyplot as plt
@@ -122,23 +140,22 @@ plt.ylabel("Scores")
 plt.title("Randomly Generated Scores")
 plt.show()
             </pre>
-            <p>With this project, I explored Matplotlib’s ability to quickly generate insightful graphs. By randomly assigning scores to names, I was able to practice formatting and labeling charts, which is a crucial skill in data storytelling.</p>
+            <p>This project taught me the importance of design in visualization, including color choices, layout, and effective labeling to make data-driven insights accessible.</p>
         </div>
     </section>
 
     <section class="section" id="contact">
-        <h3>Contact Me</h3>
+        <h2>Contact Me</h2>
         <p>Email: <a href="mailto:Jhawkinses@gmail.com">Jhawkinses@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/justin-hawkins/" target="_blank">linkedin.com/in/justin-hawkins</a></p>
     </section>
 
-    <section class="section" id="gogreengowhite" style="text-align:center; font-size:1.5rem; font-weight:bold; color:#006400; margin-top:2rem;">
+    <section class="section" id="gogreengowhite" style="text-align:center; font-size:2rem; font-weight:bold; color:#006400; margin-top:3rem;">
         <p>Go Green! Go White!</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Justin Hawkins. All rights reserved.</p>
+        &copy; 2024 Justin Hawkins. All rights reserved.
     </footer>
 </body>
 </html>
-
