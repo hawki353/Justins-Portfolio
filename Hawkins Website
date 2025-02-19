@@ -96,7 +96,7 @@
 import random
 import pandas as pd
 
-names = ["Alice", "Bob", "Charlie", "David", "Emma"]
+names = ["Stephen", "Mark", "Ben", "Abby", "Emma"]
 data = [{"Name": random.choice(names), "Age": random.randint(18, 40), "Score": random.randint(50, 100)} for _ in range(10)]
 
 df = pd.DataFrame(data)
@@ -113,7 +113,7 @@ print(df)
 import random
 import matplotlib.pyplot as plt
 
-names = ["Jake", "Mark", "Stephen", "David", "Emma"]
+names = ["David", "Antonio", "Nolan", "Ashton", "Bethany"]
 scores = [random.randint(50, 100) for _ in names]
 
 plt.bar(names, scores, color='green')
